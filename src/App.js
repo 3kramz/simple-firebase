@@ -5,6 +5,7 @@ import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import Register from './Components/Register/Register'
 import Login from './Components/Login/Login'
+import About from './Components/About/About'
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
     <Route path='/' element={<Home></Home>}></Route>
     <Route path='home' element={<Home></Home>}></Route>
     <Route path='register' element={<Register></Register>}></Route>
-    <Route path='Login' element={<Login/>}></Route>
+    <Route path='login' element={<Login/>}></Route>
+    <Route path='about' element={<About/>}></Route>
     
   </Routes>
 
