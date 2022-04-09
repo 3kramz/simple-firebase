@@ -2,14 +2,16 @@ import React from 'react';
 import useFirebase from '../Hooks/useFirebase';
 
 const Login = () => {
-    const  {user, signInWithGoogle}=useFirebase()
+    const  {user, signInWithGoogle, signOutBtn}=useFirebase()
     return (
         <div>
             <h1>Login</h1>
             <div style={{"margin":"20px"}}>
-                {
-                    user?.uid?<button>Logged by google</button>:<button onClick={signInWithGoogle}>Login by google</button>
-                }
+
+            <button onClick={ user?.uid ?signOutBtn: signInWithGoogle}>{user?.uid ? "Sign Out":"Sign in"}</button>
+
+
+               
             </div>
             <form className=''>
                

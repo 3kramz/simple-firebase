@@ -9,6 +9,7 @@ const googleProvider=new GoogleAuthProvider()
 const useFirebase = () => {
 
   const [user,setUser]=useState({}) 
+  
     const signInWithGoogle=()=>{
         signInWithPopup(auth,googleProvider)
         .then(result=>setUser(result))
@@ -16,9 +17,7 @@ const useFirebase = () => {
     }
 
     const signOutBtn=()=>{
-        signOut(auth).then(() => {
-           setUser({})
-          }).catch((error) => {
+        signOut(auth).then(() => setUser({})).catch((error) => {
             console.log("Something went Wrong")
           });
     }
