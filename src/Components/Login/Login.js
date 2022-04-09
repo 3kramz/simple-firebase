@@ -8,8 +8,7 @@ const Login = () => {
             <h1>Login</h1>
             <div style={{"margin":"20px"}}>
                 {
-                    user.uid?<button>Logged by google</button>:<button onClick={signInWithGoogle}>Login by google</button>
-                }{console.log(user)
+                    user?.uid?<button>Logged by google</button>:<button onClick={signInWithGoogle}>Login by google</button>
                 }
             </div>
             <form className=''>

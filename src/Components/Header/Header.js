@@ -8,14 +8,15 @@ import './Header.css'
 
 
 const Header = () => {
-    const{user}=useFirebase()
+    const{user ,signOutBtn}=useFirebase()
 
     return (
         <div className="nav">
             <Link to="./" >Home</Link>
             <Link to="./register" >Register</Link>
-           {user.uid?<button>Sign out</button>: <Link to="./login" >Login</Link>}
             <Link to="./about" >About</Link>
+            {user?.uid?<button onClick={signOutBtn}>Sign out</button>: <Link to="./login" >Login</Link>}
+           
         </div>
     );
 };
